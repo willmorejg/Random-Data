@@ -1,0 +1,47 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+    <artifactId>random-data-parent</artifactId>
+	<groupId>net.ljcomputing</groupId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    
+	<name>Random Data - Parent</name>
+	<description>Spring Boot application to generate random data to use primarily during testing (just POM).</description>
+
+    <!-- Contact and License Information -->
+    <organization>
+        <name>LJ Computing</name>
+        <url>http://ljcomputing.net/</url>
+    </organization>
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>James G. Willmore</name>
+        </developer>
+    </developers>
+    
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>1.2.0.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <modules>
+    	<module>random-data</module>
+    	<module>random-data-plugin-address</module>
+    	<module>random-data-plugin-person</module>
+    </modules>
+</project>
