@@ -2,12 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-    
-    <parent>
-        <groupId>net.ljcomputing</groupId>
-        <artifactId>random-data-parent</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
-    </parent>
+
+	<parent>
+		<groupId>net.ljcomputing</groupId>
+		<artifactId>random-data-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
 
 	<artifactId>random-data</artifactId>
 	<name>Random Data</name>
@@ -37,42 +37,63 @@
 		<target.version>1.7</target.version>
 	</properties>
 
-    <build>
-        <plugins>
+	<build>
+		<plugins>
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>${source.version}</source>
-                    <target>${target.version}</target>
-                </configuration>
-            </plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${source.version}</source>
+					<target>${target.version}</target>
+				</configuration>
+			</plugin>
 
-        </plugins>
+		</plugins>
 
-    </build>
-    
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>1.2.0.RELEASE</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-            	<groupId>org.springframework.boot</groupId>
-            	<artifactId>spring-boot</artifactId>
-            </dependency>
-            <dependency>
-            	<groupId>org.slf4j</groupId>
-            	<artifactId>slf4j-log4j12</artifactId>
-            </dependency>
-            <dependency>
-            	<groupId>org.springframework.boot</groupId>
-            	<artifactId>spring-boot-autoconfigure</artifactId>
-            </dependency>
-        </dependencies>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-dependencies</artifactId>
+			<version>1.2.0.RELEASE</version>
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot</artifactId>
+			<exclusions>
+				<exclusion>
+					<artifactId>commons-logging</artifactId>
+					<groupId>commons-logging</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-autoconfigure</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>
+                    spring-boot-configuration-processor
+                </artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-dependency-tools</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-core</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+		</dependency>
+    </dependencies>
 
 </project>
