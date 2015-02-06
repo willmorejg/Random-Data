@@ -1,5 +1,5 @@
 /**
-           Copyright 2014, James G. Willmore
+           Copyright 2015, James G. Willmore
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -14,26 +14,32 @@
    limitations under the License.
  */
 
-package net.ljcomputing.randomdata.generator;
+
+package net.ljcomputing.randomdata.plugin;
+
+import net.ljcomputing.randomdata.generator.Generator;
+import net.ljcomputing.randomdata.plugin.impl.FourDigitDataDefinitionImpl;
 
 /**
- * Data generator interface.
+ * Interface for a four digit phone number generator.
  * 
  * @author James G. Willmore
- * @param <T>
- *            the data definition
+ *
  */
-public interface Generator<T> {
-
-    /**
-     * Gets the data definition.
-     *
-     * @return the data definition
-     */
-    public T getDataDefinition();
+public interface FourDigitGenerator extends Generator<FourDigitDataDefinitionImpl> {
     
     /**
-     * Generate a data value.
+     * Generate a phone number's number.
+     *
+     * @return the integer
      */
-    public Object generateValue();
+    public Integer number();
+    
+    /**
+     * Generate a phone number's extension.
+     *
+     * @return the integer
+     */
+    public Integer extension();
+
 }

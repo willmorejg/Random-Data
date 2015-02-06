@@ -38,6 +38,6 @@ public class AddressStateGeneratorImpl extends
      * @return the string
      */
     public String state() {
-        return generateValue();
+        return (String)generateValue();
     }
 }

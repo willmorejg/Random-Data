@@ -38,6 +38,6 @@ public class PersonFirstNameGeneratorImpl extends
      * @return the string
      */
     public String firstName() {
-        return generateValue();
+        return (String)generateValue();
     }
 }

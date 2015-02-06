@@ -1,5 +1,5 @@
 /**
-           Copyright 2014, James G. Willmore
+           Copyright 2015, James G. Willmore
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -14,26 +14,31 @@
    limitations under the License.
  */
 
-package net.ljcomputing.randomdata.generator;
+
+package net.ljcomputing.randomdata.plugin;
+
+import net.ljcomputing.randomdata.generator.Generator;
+import net.ljcomputing.randomdata.plugin.impl.ThreeDigitDataDefinitionImpl;
 
 /**
- * Data generator interface.
+ * Interface for a three digit phone number generator.
  * 
  * @author James G. Willmore
- * @param <T>
- *            the data definition
+ *
  */
-public interface Generator<T> {
-
-    /**
-     * Gets the data definition.
-     *
-     * @return the data definition
-     */
-    public T getDataDefinition();
+public interface ThreeDigitGenerator extends Generator<ThreeDigitDataDefinitionImpl> {
     
     /**
-     * Generate a data value.
+     * Generate a phone number's area code.
+     *
+     * @return the integer
      */
-    public Object generateValue();
+    public Integer areaCode();
+    
+    /**
+     * Generate a phone number's prefix.
+     *
+     * @return the integer
+     */
+    public Integer prefix();
 }

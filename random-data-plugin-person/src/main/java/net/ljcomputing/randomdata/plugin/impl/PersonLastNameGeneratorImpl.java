@@ -38,6 +38,6 @@ public class PersonLastNameGeneratorImpl extends
      * @return the string
      */
     public String lastName() {
-        return generateValue();
+        return (String)generateValue();
     }
 }

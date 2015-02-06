@@ -41,13 +41,13 @@ public class AddressPluginImpl implements AddressPlugin {
      * @see net.ljcomputing.randomdata.plugin.AddressPlugin#address1()
      */
     public String address1() {
-        return street1Generator.generateValue();
+        return (String)street1Generator.generateValue();
     }
 
     /**
      * @see net.ljcomputing.randomdata.plugin.AddressPlugin#state()
      */
     public String state() {
-        return stateGenerator.generateValue();
+        return (String)stateGenerator.generateValue();
     }
 }

@@ -53,7 +53,7 @@ public abstract class AbstractDataDefinition<T extends DataSource> implements
     /**
      * @see net.ljcomputing.randomdata.plugin.DataDefinition#data()
      */
-    public String[] data() {
+    public Object[] data() {
         return dataSource.getData();
     }
 

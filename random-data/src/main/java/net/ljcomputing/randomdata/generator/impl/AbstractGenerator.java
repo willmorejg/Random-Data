@@ -54,7 +54,7 @@ public abstract class AbstractGenerator<T extends DataDefinition<?>>
     /**
      * @see net.ljcomputing.randomdata.generator.Generator#generateValue()
      */
-    public String generateValue() {
+    public Object generateValue() {
         logger.debug("total records: " + getDataDefinition().totalRecords());
         int line = generateRandomNumber(getDataDefinition().totalRecords());
         logger.debug("line: " + line);

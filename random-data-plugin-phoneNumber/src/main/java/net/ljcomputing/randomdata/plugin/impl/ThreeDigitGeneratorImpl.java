@@ -1,5 +1,5 @@
 /**
-           Copyright 2014, James G. Willmore
+           Copyright 2015, James G. Willmore
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -14,30 +14,34 @@
    limitations under the License.
  */
 
+
 package net.ljcomputing.randomdata.plugin.impl;
 
 import net.ljcomputing.randomdata.generator.impl.AbstractGenerator;
-import net.ljcomputing.randomdata.plugin.AddressStreet1Generator;
+import net.ljcomputing.randomdata.plugin.ThreeDigitGenerator;
 
 import org.springframework.stereotype.Component;
 
 /**
- * Address street1 data generator.
+ * A phone number area code generator.
  * 
  * @author James G. Willmore
- * 
+ *
  */
 @Component
-public class AddressStreet1GeneratorImpl extends
-        AbstractGenerator<AddressStreet1DataDefinitionImpl> implements
-        AddressStreet1Generator {
+public class ThreeDigitGeneratorImpl extends AbstractGenerator<ThreeDigitDataDefinitionImpl> implements ThreeDigitGenerator {
+    
+    /**
+     * @see net.ljcomputing.randomdata.plugin.ThreeDigitGenerator#areaCode()
+     */
+    public Integer areaCode() {
+	return (Integer)generateValue();
+    }
 
     /**
-     * Street1.
-     * 
-     * @return the string
+     * @see net.ljcomputing.randomdata.plugin.ThreeDigitGenerator#prefix()
      */
-    public String street1() {
-        return (String)generateValue();
+    public Integer prefix() {
+	return (Integer)generateValue();
     }
 }

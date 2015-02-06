@@ -43,5 +43,6 @@
     	<module>random-data</module>
     	<module>random-data-plugin-address</module>
     	<module>random-data-plugin-person</module>
+    	<module>random-data-plugin-phoneNumber</module>
     </modules>
 </project>

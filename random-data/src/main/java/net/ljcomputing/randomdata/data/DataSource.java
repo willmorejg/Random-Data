@@ -39,5 +39,5 @@ public interface DataSource {
      * 
      * @return the data
      */
-    public String[] getData();
+    public Object[] getData();
 }

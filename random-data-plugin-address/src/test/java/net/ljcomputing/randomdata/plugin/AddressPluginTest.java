@@ -1,5 +1,5 @@
 /**
-           Copyright 2014, James G. Willmore
+           Copyright 2015, James G. Willmore
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -14,39 +14,32 @@
    limitations under the License.
  */
 
+
 package net.ljcomputing.randomdata.plugin;
 
+import static org.junit.Assert.*;
+import net.ljcomputing.randomdata.plugin.AddressPlugin;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
 /**
- * Define the data for use by the plugin.
- * 
  * @author James G. Willmore
- * 
+ *
  */
-public interface DataDefinition<T> {
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration
+public class AddressPluginTest {
+    
+    @Autowired
+    private AddressPlugin addressPlugin;
 
-    /**
-     * Gets the data source.
-     * 
-     * @return the data source
-     */
-    public T dataSource();
+    @Test
+    public void test() {
+	fail("Not yet implemented");
+    }
 
-    /**
-     * Initializes the data definition.
-     */
-    public void init();
-
-    /**
-     *  The data in the data definition file.
-     *
-     * @return the string[]
-     */
-    public Object[] data();
-
-    /**
-     * Total records found in the data definition file.
-     * 
-     * @return the total number of records (line) in the data definition file
-     */
-    public int totalRecords();
 }

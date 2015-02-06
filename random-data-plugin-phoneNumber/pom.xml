@@ -1,6 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>net.ljcomputing</groupId>
@@ -8,9 +8,9 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-	<artifactId>random-data-plugin-address</artifactId>
-	<name>Random Data Address Plugin</name>
-	<description>Random Data plugin used to generate data related to an address.</description>
+    <artifactId>random-data-plugin-phoneNumber</artifactId>
+    <name>Random Data Phone Number Plugin</name>
+    <description>Random Data plugin used to generate data related to a phone number.</description>
 
     <!-- Contact and License Information -->
     <organization>
@@ -29,26 +29,21 @@
         </developer>
     </developers>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<source.version>1.7</source.version>
-		<target.version>1.7</target.version>
-	</properties>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <source.version>1.7</source.version>
+        <target.version>1.7</target.version>
+    </properties>
 
-	<dependencies>
+    <dependencies>
 
-		<dependency>
-			<groupId>net.ljcomputing</groupId>
-			<artifactId>random-data</artifactId>
+        <dependency>
+            <groupId>net.ljcomputing</groupId>
+            <artifactId>random-data</artifactId>
             <version>1.0.0-SNAPSHOT</version>
-		</dependency>
+        </dependency>
 
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit-dep</artifactId>
-			<version>4.10</version>
-		</dependency>
-	</dependencies>
+    </dependencies>
 
     <build>
         <plugins>

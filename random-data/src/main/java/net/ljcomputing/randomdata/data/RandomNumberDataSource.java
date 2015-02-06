@@ -1,5 +1,5 @@
 /**
-           Copyright 2014, James G. Willmore
+           Copyright 2015, James G. Willmore
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -14,26 +14,26 @@
    limitations under the License.
  */
 
-package net.ljcomputing.randomdata.generator;
+package net.ljcomputing.randomdata.data;
 
 /**
- * Data generator interface.
+ * Interface to a numeric-based data source.
  * 
  * @author James G. Willmore
- * @param <T>
- *            the data definition
+ *
  */
-public interface Generator<T> {
+public interface RandomNumberDataSource extends DataSource {
+    /**
+     * Lower range to use when generating a random number.
+     *
+     * @return the lower range
+     */
+    public int lowerRange();
 
     /**
-     * Gets the data definition.
+     * Upper range to use when generating a random number.
      *
-     * @return the data definition
+     * @return the upper range
      */
-    public T getDataDefinition();
-    
-    /**
-     * Generate a data value.
-     */
-    public Object generateValue();
+    public int upperRange();
 }

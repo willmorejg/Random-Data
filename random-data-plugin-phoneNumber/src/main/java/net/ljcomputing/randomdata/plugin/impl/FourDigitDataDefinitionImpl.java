@@ -1,5 +1,5 @@
 /**
-           Copyright 2014, James G. Willmore
+           Copyright 2015, James G. Willmore
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -14,26 +14,24 @@
    limitations under the License.
  */
 
-package net.ljcomputing.randomdata.generator;
+
+package net.ljcomputing.randomdata.plugin.impl;
+
+import net.ljcomputing.randomdata.plugin.DataDefinition;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
 
 /**
- * Data generator interface.
- * 
  * @author James G. Willmore
- * @param <T>
- *            the data definition
+ *
  */
-public interface Generator<T> {
+@Component
+public class FourDigitDataDefinitionImpl extends AbstractDataDefinition<FourDigitDataSourceImpl> implements DataDefinition<FourDigitDataSourceImpl> {
 
-    /**
-     * Gets the data definition.
-     *
-     * @return the data definition
-     */
-    public T getDataDefinition();
-    
-    /**
-     * Generate a data value.
-     */
-    public Object generateValue();
+    @Bean
+    public FourDigitDataSourceImpl dataSource() {
+	return new FourDigitDataSourceImpl();
+    }
+
 }
