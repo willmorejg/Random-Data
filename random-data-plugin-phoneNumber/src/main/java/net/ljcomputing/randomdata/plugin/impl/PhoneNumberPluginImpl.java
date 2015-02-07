@@ -37,20 +37,20 @@ public class PhoneNumberPluginImpl implements PhoneNumberPlugin {
     @Autowired
     private FourDigitGenerator fourDigitGenerator;
     
-    public Integer areaCode() {
-	return (Integer) threeDigitGenerator.generateValue();
+    public String areaCode() {
+	return threeDigitGenerator.areaCode();
     }
 
-    public Integer prefix() {
-	return (Integer) threeDigitGenerator.generateValue();
+    public String prefix() {
+	return threeDigitGenerator.prefix();
     }
 
-    public Integer number() {
-	return (Integer) fourDigitGenerator.generateValue();
+    public String number() {
+	return fourDigitGenerator.number();
     }
 
-    public Integer extension() {
-	return (Integer) fourDigitGenerator.generateValue();
+    public String extension() {
+	return fourDigitGenerator.extension();
     }
 
 }

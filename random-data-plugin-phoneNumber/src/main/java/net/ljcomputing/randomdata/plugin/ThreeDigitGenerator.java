@@ -31,14 +31,14 @@ public interface ThreeDigitGenerator extends Generator<ThreeDigitDataDefinitionI
     /**
      * Generate a phone number's area code.
      *
-     * @return the integer
+     * @return 
      */
-    public Integer areaCode();
+    public String areaCode();
     
     /**
      * Generate a phone number's prefix.
      *
-     * @return the integer
+     * @return 
      */
-    public Integer prefix();
+    public String prefix();
 }

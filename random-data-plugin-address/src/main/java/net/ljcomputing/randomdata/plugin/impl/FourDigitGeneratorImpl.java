@@ -37,11 +37,4 @@ public class FourDigitGeneratorImpl extends AbstractGenerator<FourDigitDataDefin
     public String number() {
 	return generateValue().toString();
     }
-
-    /**
-     * @see net.ljcomputing.randomdata.plugin.FourDigitGenerator#extension()
-     */
-    public String extension() {
-	return generateValue().toString();
-    }
 }

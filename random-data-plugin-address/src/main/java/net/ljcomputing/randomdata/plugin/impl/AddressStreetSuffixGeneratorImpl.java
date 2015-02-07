@@ -1,5 +1,5 @@
 /**
-           Copyright 2015, James G. Willmore
+           Copyright 2014, James G. Willmore
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -14,34 +14,26 @@
    limitations under the License.
  */
 
-
 package net.ljcomputing.randomdata.plugin.impl;
 
 import net.ljcomputing.randomdata.generator.impl.AbstractGenerator;
-import net.ljcomputing.randomdata.plugin.FourDigitGenerator;
+import net.ljcomputing.randomdata.plugin.AddressStreetSuffixGenerator;
 
 import org.springframework.stereotype.Component;
 
 /**
- * A phone number four digit number generator.
+ * Address street suffix data generator.
  * 
  * @author James G. Willmore
- *
+ * 
  */
 @Component
-public class FourDigitGeneratorImpl extends AbstractGenerator<FourDigitDataDefinitionImpl> implements FourDigitGenerator {
+public class AddressStreetSuffixGeneratorImpl extends
+	AbstractGenerator<AddressStreetSuffixDataDefinitionImpl> implements
+	AddressStreetSuffixGenerator {
 
-    /**
-     * @see net.ljcomputing.randomdata.plugin.FourDigitGenerator#number()
-     */
-    public String number() {
-	return generateValue().toString();
-    }
-
-    /**
-     * @see net.ljcomputing.randomdata.plugin.FourDigitGenerator#extension()
-     */
-    public String extension() {
-	return generateValue().toString();
+    @Override
+    public String streetSuffix() {
+	return (String)generateValue();
     }
 }

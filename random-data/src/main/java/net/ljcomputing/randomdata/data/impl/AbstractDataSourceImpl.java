@@ -55,7 +55,7 @@ public abstract class AbstractDataSourceImpl implements DataSource {
      * @see net.ljcomputing.randomdata.data.DataSource#getData()
      */
     public Object[] getData() {
-        logger.debug(null != data ? "data: " + Arrays.asList(data).toString() : "NO DATA");
+        //logger.debug(null != data ? "data: " + Arrays.asList(data).toString() : "NO DATA");
         return data;
     }
 

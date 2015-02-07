@@ -31,15 +31,15 @@ public interface FourDigitGenerator extends Generator<FourDigitDataDefinitionImp
     /**
      * Generate a phone number's number.
      *
-     * @return the integer
+     * @return
      */
-    public Integer number();
+    public String number();
     
     /**
      * Generate a phone number's extension.
      *
-     * @return the integer
+     * @return
      */
-    public Integer extension();
+    public String extension();
 
 }

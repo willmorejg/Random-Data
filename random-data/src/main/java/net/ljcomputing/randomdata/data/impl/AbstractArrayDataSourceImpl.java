@@ -1,5 +1,5 @@
 /**
-           Copyright 2014, James G. Willmore
+           Copyright 2015, James G. Willmore
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -14,34 +14,30 @@
    limitations under the License.
  */
 
-package net.ljcomputing.randomdata.plugin;
+package net.ljcomputing.randomdata.data.impl;
+
+import net.ljcomputing.randomdata.data.ArrayDataSource;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * Random data address plugin interface.
+ * Array data source.
  * 
  * @author James G. Willmore
  *
  */
-public interface AddressPlugin {
-    
+public abstract class AbstractArrayDataSourceImpl extends
+	AbstractDataSourceImpl implements ArrayDataSource {
+
+    private static Logger logger = LoggerFactory
+	    .getLogger(AbstractArrayDataSourceImpl.class);
+
     /**
-     * Address value (street).
-     *
-     * @return the string
+     * @see net.ljcomputing.randomdata.data.DataSource#populate()
      */
-    public String address1();
-    
-    /**
-     * State value.
-     *
-     * @return the string
-     */
-    public String state();
-    
-    /**
-     * Zip code value.
-     *
-     * @return the string
-     */
-    public String zipCode();
+    public void populate() {
+	data = dataArray();
+    }
+
 }

@@ -28,28 +28,28 @@ public interface PhoneNumberPlugin {
     /**
      * Area code value.
      *
-     * @return the integer
+     * @return
      */
-    public Integer areaCode();
+    public String areaCode();
     
     /**
      * Prefix value.
      *
-     * @return the integer
+     * @return
      */
-    public Integer prefix();
+    public String prefix();
     
     /**
      * Number value.
      *
-     * @return the integer
+     * @return
      */
-    public Integer number();
+    public String number();
     
     /**
      * Extension value.
      *
-     * @return the integer
+     * @return
      */
-    public Integer extension();
+    public String extension();
 }

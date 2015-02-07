@@ -18,7 +18,7 @@
 package net.ljcomputing.randomdata.plugin.impl;
 
 import net.ljcomputing.randomdata.generator.impl.AbstractGenerator;
-import net.ljcomputing.randomdata.plugin.FourDigitGenerator;
+import net.ljcomputing.randomdata.plugin.FiveDigitGenerator;
 
 import org.springframework.stereotype.Component;
 
@@ -29,19 +29,12 @@ import org.springframework.stereotype.Component;
  *
  */
 @Component
-public class FourDigitGeneratorImpl extends AbstractGenerator<FourDigitDataDefinitionImpl> implements FourDigitGenerator {
+public class FiveDigitGeneratorImpl extends AbstractGenerator<FiveDigitDataDefinitionImpl> implements FiveDigitGenerator {
 
     /**
-     * @see net.ljcomputing.randomdata.plugin.FourDigitGenerator#number()
+     * @see net.ljcomputing.randomdata.plugin.FiveDigitGenerator#zipCode()
      */
-    public String number() {
-	return generateValue().toString();
-    }
-
-    /**
-     * @see net.ljcomputing.randomdata.plugin.FourDigitGenerator#extension()
-     */
-    public String extension() {
-	return generateValue().toString();
+    public String zipCode() {
+	return (String)generateValue().toString();
     }
 }

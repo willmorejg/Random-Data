@@ -34,14 +34,14 @@ public class ThreeDigitGeneratorImpl extends AbstractGenerator<ThreeDigitDataDef
     /**
      * @see net.ljcomputing.randomdata.plugin.ThreeDigitGenerator#areaCode()
      */
-    public Integer areaCode() {
-	return (Integer)generateValue();
+    public String areaCode() {
+	return generateValue().toString();
     }
 
     /**
      * @see net.ljcomputing.randomdata.plugin.ThreeDigitGenerator#prefix()
      */
-    public Integer prefix() {
-	return (Integer)generateValue();
+    public String prefix() {
+	return generateValue().toString();
     }
 }

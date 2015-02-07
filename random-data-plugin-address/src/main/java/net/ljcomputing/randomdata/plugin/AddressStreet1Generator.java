@@ -16,6 +16,8 @@
 
 package net.ljcomputing.randomdata.plugin;
 
+import org.springframework.stereotype.Component;
+
 import net.ljcomputing.randomdata.generator.Generator;
 import net.ljcomputing.randomdata.plugin.impl.AddressStreet1DataDefinitionImpl;
 
@@ -25,6 +27,7 @@ import net.ljcomputing.randomdata.plugin.impl.AddressStreet1DataDefinitionImpl;
  * @author James G. Willmore
  *
  */
+@Component(value="street1")
 public interface AddressStreet1Generator extends Generator<AddressStreet1DataDefinitionImpl> {
     /**
      * Generate a street1 address.

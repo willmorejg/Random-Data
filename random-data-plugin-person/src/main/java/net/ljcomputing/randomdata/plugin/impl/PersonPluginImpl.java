@@ -41,13 +41,13 @@ public class PersonPluginImpl implements PersonPlugin {
      * @see net.ljcomputing.randomdata.plugin.PersonPlugin#firstName()
      */
     public String firstName() {
-        return (String)firstNameGenerator.generateValue();
+        return (String)firstNameGenerator.firstName();
     }
 
     /**
      * @see net.ljcomputing.randomdata.plugin.PersonPlugin#lastName()
      */
     public String lastName() {
-        return (String)lastNameGenerator.generateValue();
+        return (String)lastNameGenerator.lastName();
     }
 }

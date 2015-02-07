@@ -16,6 +16,8 @@
 
 package net.ljcomputing.randomdata.plugin;
 
+import org.springframework.stereotype.Component;
+
 import net.ljcomputing.randomdata.generator.Generator;
 import net.ljcomputing.randomdata.plugin.impl.AddressStateDataDefinitionImpl;
 
@@ -25,6 +27,7 @@ import net.ljcomputing.randomdata.plugin.impl.AddressStateDataDefinitionImpl;
  * @author James G. Willmore
  * 
  */
+@Component(value="state")
 public interface AddressStateGenerator extends
         Generator<AddressStateDataDefinitionImpl> {
     /**

@@ -42,7 +42,7 @@ public abstract class AbstractRandomNumberDataSourceImpl extends
 	
 	for(int i = 0; i < size; i++) {
 	    data[i] = upperRange() - i;
-	    logger.debug("i = {}, data[i] = {}", i, data[i]);
+	    //logger.debug("i = {}, data[i] = {}", i, data[i]);
 	}
     }
 

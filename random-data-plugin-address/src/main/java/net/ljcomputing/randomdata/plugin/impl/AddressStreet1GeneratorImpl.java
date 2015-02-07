@@ -18,7 +18,10 @@ package net.ljcomputing.randomdata.plugin.impl;
 
 import net.ljcomputing.randomdata.generator.impl.AbstractGenerator;
 import net.ljcomputing.randomdata.plugin.AddressStreet1Generator;
+import net.ljcomputing.randomdata.plugin.AddressStreetSuffixGenerator;
+import net.ljcomputing.randomdata.plugin.FourDigitGenerator;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -31,6 +34,11 @@ import org.springframework.stereotype.Component;
 public class AddressStreet1GeneratorImpl extends
         AbstractGenerator<AddressStreet1DataDefinitionImpl> implements
         AddressStreet1Generator {
+    @Autowired
+    private FourDigitGenerator prefixGenerator;
+
+    @Autowired
+    private AddressStreetSuffixGenerator suffixGenerator;
 
     /**
      * Street1.
@@ -38,6 +46,6 @@ public class AddressStreet1GeneratorImpl extends
      * @return the string
      */
     public String street1() {
-        return (String)generateValue();
+	return prefixGenerator.number() + " " + (String)generateValue() + " " + (String)suffixGenerator.streetSuffix();
     }
 }

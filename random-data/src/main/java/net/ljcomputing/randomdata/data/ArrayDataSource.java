@@ -1,5 +1,5 @@
 /**
-           Copyright 2014, James G. Willmore
+           Copyright 2015, James G. Willmore
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -14,34 +14,21 @@
    limitations under the License.
  */
 
-package net.ljcomputing.randomdata.plugin;
+
+package net.ljcomputing.randomdata.data;
 
 /**
- * Random data address plugin interface.
+ * Interface to an array-based data source.
  * 
  * @author James G. Willmore
  *
  */
-public interface AddressPlugin {
+public interface ArrayDataSource extends DataSource {
     
     /**
-     * Address value (street).
+     * Define the data array.
      *
-     * @return the string
+     * @return the object[]
      */
-    public String address1();
-    
-    /**
-     * State value.
-     *
-     * @return the string
-     */
-    public String state();
-    
-    /**
-     * Zip code value.
-     *
-     * @return the string
-     */
-    public String zipCode();
+    public Object[] dataArray();
 }

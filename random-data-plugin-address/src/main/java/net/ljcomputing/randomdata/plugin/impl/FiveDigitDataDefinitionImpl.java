@@ -17,31 +17,21 @@
 
 package net.ljcomputing.randomdata.plugin.impl;
 
-import net.ljcomputing.randomdata.generator.impl.AbstractGenerator;
-import net.ljcomputing.randomdata.plugin.FourDigitGenerator;
+import net.ljcomputing.randomdata.plugin.DataDefinition;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 /**
- * A phone number four digit number generator.
- * 
  * @author James G. Willmore
  *
  */
 @Component
-public class FourDigitGeneratorImpl extends AbstractGenerator<FourDigitDataDefinitionImpl> implements FourDigitGenerator {
+public class FiveDigitDataDefinitionImpl extends AbstractDataDefinition<FiveDigitDataSourceImpl> implements DataDefinition<FiveDigitDataSourceImpl> {
 
-    /**
-     * @see net.ljcomputing.randomdata.plugin.FourDigitGenerator#number()
-     */
-    public String number() {
-	return generateValue().toString();
+    @Bean
+    public FiveDigitDataSourceImpl dataSource() {
+	return new FiveDigitDataSourceImpl();
     }
 
-    /**
-     * @see net.ljcomputing.randomdata.plugin.FourDigitGenerator#extension()
-     */
-    public String extension() {
-	return generateValue().toString();
-    }
 }

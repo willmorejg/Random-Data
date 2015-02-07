@@ -16,32 +16,25 @@
 
 package net.ljcomputing.randomdata.plugin;
 
+import org.springframework.stereotype.Component;
+
+import net.ljcomputing.randomdata.generator.Generator;
+import net.ljcomputing.randomdata.plugin.impl.AddressStreetSuffixDataDefinitionImpl;
+
 /**
- * Random data address plugin interface.
+ * Interface for an address state generator.
  * 
  * @author James G. Willmore
- *
+ * 
  */
-public interface AddressPlugin {
-    
+@Component(value="streetSuffix")
+public interface AddressStreetSuffixGenerator extends
+	Generator<AddressStreetSuffixDataDefinitionImpl> {
+
     /**
-     * Address value (street).
+     * Street suffix.
      *
      * @return the string
      */
-    public String address1();
-    
-    /**
-     * State value.
-     *
-     * @return the string
-     */
-    public String state();
-    
-    /**
-     * Zip code value.
-     *
-     * @return the string
-     */
-    public String zipCode();
+    public String streetSuffix();
 }

@@ -1,5 +1,5 @@
 /**
-           Copyright 2014, James G. Willmore
+           Copyright 2015, James G. Willmore
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -14,34 +14,24 @@
    limitations under the License.
  */
 
+
 package net.ljcomputing.randomdata.plugin;
 
+import net.ljcomputing.randomdata.generator.Generator;
+import net.ljcomputing.randomdata.plugin.impl.FiveDigitDataDefinitionImpl;
+
 /**
- * Random data address plugin interface.
+ * Interface for a five digit address prefix generator.
  * 
  * @author James G. Willmore
  *
  */
-public interface AddressPlugin {
+public interface FiveDigitGenerator extends Generator<FiveDigitDataDefinitionImpl> {
     
     /**
-     * Address value (street).
+     * Generate a address' zip code.
      *
-     * @return the string
-     */
-    public String address1();
-    
-    /**
-     * State value.
-     *
-     * @return the string
-     */
-    public String state();
-    
-    /**
-     * Zip code value.
-     *
-     * @return the string
+     * @return the integer
      */
     public String zipCode();
 }
