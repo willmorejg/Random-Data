@@ -18,9 +18,6 @@ package net.ljcomputing.randomdata.data.impl;
 
 import net.ljcomputing.randomdata.data.ArrayDataSource;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 /**
  * Array data source.
  * 
@@ -29,10 +26,6 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class AbstractArrayDataSourceImpl extends
 	AbstractDataSourceImpl implements ArrayDataSource {
-
-    private static Logger logger = LoggerFactory
-	    .getLogger(AbstractArrayDataSourceImpl.class);
-
     /**
      * @see net.ljcomputing.randomdata.data.DataSource#populate()
      */
