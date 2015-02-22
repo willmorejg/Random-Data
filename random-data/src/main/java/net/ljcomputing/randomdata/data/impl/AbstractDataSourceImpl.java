@@ -16,8 +16,6 @@
 
 package net.ljcomputing.randomdata.data.impl;
 
-import java.util.Arrays;
-
 import javax.annotation.PostConstruct;
 
 import net.ljcomputing.randomdata.data.DataSource;

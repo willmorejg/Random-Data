@@ -31,6 +31,7 @@ import net.ljcomputing.randomdata.data.RandomNumberDataSource;
 public abstract class AbstractRandomNumberDataSourceImpl extends
 	AbstractDataSourceImpl implements RandomNumberDataSource {
 
+    @SuppressWarnings("unused")
     private static Logger logger = LoggerFactory.getLogger(AbstractRandomNumberDataSourceImpl.class);
     
     /**
