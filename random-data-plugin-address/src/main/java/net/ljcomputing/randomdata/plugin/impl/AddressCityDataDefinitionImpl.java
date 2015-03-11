@@ -28,12 +28,12 @@ import org.springframework.stereotype.Component;
  * 
  */
 @Component
-public class AddressStreet1DataDefinitionImpl extends
-        AbstractDataDefinition<AddressStreet1DataSourceImpl> implements
-        DataDefinition<AddressStreet1DataSourceImpl> {
+public class AddressCityDataDefinitionImpl extends
+        AbstractDataDefinition<AddressCityDataSourceImpl> implements
+        DataDefinition<AddressCityDataSourceImpl> {
 
     @Bean
-    public AddressStreet1DataSourceImpl dataSource() {
-        return new AddressStreet1DataSourceImpl();
+    public AddressCityDataSourceImpl dataSource() {
+        return new AddressCityDataSourceImpl();
     }
 }

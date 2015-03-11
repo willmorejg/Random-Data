@@ -16,24 +16,28 @@
 
 package net.ljcomputing.randomdata.plugin.impl;
 
-import net.ljcomputing.randomdata.plugin.DataDefinition;
+import net.ljcomputing.randomdata.generator.impl.AbstractGenerator;
+import net.ljcomputing.randomdata.plugin.AddressCityGenerator;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 /**
- * An address data definition.
+ * Address city data generator.
  * 
  * @author James G. Willmore
  * 
  */
 @Component
-public class AddressStreet1DataDefinitionImpl extends
-        AbstractDataDefinition<AddressStreet1DataSourceImpl> implements
-        DataDefinition<AddressStreet1DataSourceImpl> {
+public class AddressCityGeneratorImpl extends
+	AbstractGenerator<AddressCityDataDefinitionImpl> implements
+	AddressCityGenerator {
 
-    @Bean
-    public AddressStreet1DataSourceImpl dataSource() {
-        return new AddressStreet1DataSourceImpl();
+    /**
+     * City.
+     * 
+     * @return the string
+     */
+    public String city() {
+	return (String) generateValue();
     }
 }

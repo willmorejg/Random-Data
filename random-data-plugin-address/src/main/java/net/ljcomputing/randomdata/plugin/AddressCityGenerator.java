@@ -14,26 +14,26 @@
    limitations under the License.
  */
 
-package net.ljcomputing.randomdata.plugin.impl;
+package net.ljcomputing.randomdata.plugin;
 
-import net.ljcomputing.randomdata.plugin.DataDefinition;
+import net.ljcomputing.randomdata.generator.Generator;
+import net.ljcomputing.randomdata.plugin.impl.AddressCityDataDefinitionImpl;
 
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 /**
- * An address data definition.
+ * Interface for an address city generator.
  * 
  * @author James G. Willmore
- * 
+ *
  */
-@Component
-public class AddressStreet1DataDefinitionImpl extends
-        AbstractDataDefinition<AddressStreet1DataSourceImpl> implements
-        DataDefinition<AddressStreet1DataSourceImpl> {
-
-    @Bean
-    public AddressStreet1DataSourceImpl dataSource() {
-        return new AddressStreet1DataSourceImpl();
-    }
+@Component(value = "city")
+public interface AddressCityGenerator extends
+	Generator<AddressCityDataDefinitionImpl> {
+    /**
+     * Generate a city address.
+     *
+     * @return the string
+     */
+    public String city();
 }

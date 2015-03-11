@@ -16,10 +16,13 @@
 
 package net.ljcomputing.randomdata.plugin.impl;
 
+import net.ljcomputing.randomdata.plugin.AddressCityGenerator;
 import net.ljcomputing.randomdata.plugin.AddressPlugin;
 import net.ljcomputing.randomdata.plugin.AddressStateGenerator;
 import net.ljcomputing.randomdata.plugin.AddressStreet1Generator;
+import net.ljcomputing.randomdata.plugin.AddressStreet2Generator;
 import net.ljcomputing.randomdata.plugin.FiveDigitGenerator;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -35,6 +38,12 @@ public class AddressPluginImpl implements AddressPlugin {
     private AddressStreet1Generator street1Generator;
 
     @Autowired
+    private AddressStreet2Generator street2Generator;
+
+    @Autowired
+    private AddressCityGenerator cityGenerator;
+
+    @Autowired
     private AddressStateGenerator stateGenerator;
 
     @Autowired
@@ -44,16 +53,30 @@ public class AddressPluginImpl implements AddressPlugin {
      * @see net.ljcomputing.randomdata.plugin.AddressPlugin#address1()
      */
     public String address1() {
-	return (String)street1Generator.street1();
+	return (String) street1Generator.street1();
+    }
+
+    /**
+     * @see net.ljcomputing.randomdata.plugin.AddressPlugin#address2()
+     */
+    public String address2() {
+	return (String) street2Generator.street2();
+    }
+
+    /**
+     * @see net.ljcomputing.randomdata.plugin.AddressPlugin#city()
+     */
+    public String city() {
+	return (String) cityGenerator.city();
     }
 
     /**
      * @see net.ljcomputing.randomdata.plugin.AddressPlugin#state()
      */
     public String state() {
-        return (String)stateGenerator.state();
+	return (String) stateGenerator.state();
     }
-    
+
     /**
      * @see net.ljcomputing.randomdata.plugin.AddressPlugin#zipCode()
      */

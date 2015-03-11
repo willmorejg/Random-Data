@@ -102,7 +102,6 @@ Travo
 Dilsen-Stokkem
 Randazzo
 Barra do Corda
-Ribeirão Preto
 Warrnambool
 Cambridge Bay
 Meugliano
@@ -154,8 +153,6 @@ Bowling Green
 Gougnies
 Goderich
 Dendermonde
-Częstochowa
-Portico e San Benedetto
 Neuwied
 Grantham
 Lakeland County
@@ -198,3 +195,76 @@ Savona
 Port Watson
 Adolphusside
 North Garland
+Beirut
+Corapeake
+Auckland
+Columbus
+Woodrow
+Norfolk Nas
+Ghent
+Virginia Beach
+Pfafftown
+Mexico City
+Lake Forest
+South Bend
+Jacksonville
+Orange
+Redwood City
+Victoria
+Ankara
+Turner City
+Hyde Park
+Lynnhaven
+Newbury
+Phoebus
+Tarawa
+North Virginia Beach
+Bogot
+Guaynabo
+Oslo
+Arden-arcade
+Rapid City
+Midwest City
+Davis
+Houston
+Irvine
+Alhambra
+Union City
+Fairfield
+Huntington
+Panama City
+Waterbury
+Plaistow
+Avon
+Mission Dorado
+Niamey
+Islamabad
+Youngstown
+Lawrence
+Herberts Corner
+El Macero
+Aina Haina
+Hoover
+Kings Fork
+Battle Creek
+Gainesville
+New Delhi
+Monaco
+Dublin
+Lorain
+Wildewall
+Wyverncliff
+Greyrose
+Fallbell
+Ironbay
+Vertdell
+Merridale
+Deephurst
+Summerholt
+Whiteby
+Millley
+Fogdell
+Lochholt
+Aelfort
+Fayhill
+Grassbeach

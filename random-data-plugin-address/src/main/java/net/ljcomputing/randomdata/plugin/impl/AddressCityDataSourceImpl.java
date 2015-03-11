@@ -16,24 +16,28 @@
 
 package net.ljcomputing.randomdata.plugin.impl;
 
-import net.ljcomputing.randomdata.plugin.DataDefinition;
+import net.ljcomputing.randomdata.data.FileDataSource;
+import net.ljcomputing.randomdata.data.impl.AbstractFileDataSourceImpl;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 /**
- * An address data definition.
+ * Address city data source implementation.
  * 
  * @author James G. Willmore
  * 
  */
 @Component
-public class AddressStreet1DataDefinitionImpl extends
-        AbstractDataDefinition<AddressStreet1DataSourceImpl> implements
-        DataDefinition<AddressStreet1DataSourceImpl> {
+public class AddressCityDataSourceImpl extends AbstractFileDataSourceImpl
+        implements FileDataSource {
 
+    /**
+     * @see net.ljcomputing.randomdata.data.impl.AbstractFileDataSourceImpl#dataSourceFilename()
+     */
     @Bean
-    public AddressStreet1DataSourceImpl dataSource() {
-        return new AddressStreet1DataSourceImpl();
+    public String dataSourceFilename() {
+        return "addressCity.txt";
     }
+
 }

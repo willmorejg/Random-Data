@@ -32,6 +32,20 @@ public interface AddressPlugin {
     public String address1();
     
     /**
+     * Address value (P.O. Box).
+     *
+     * @return the string
+     */
+    public String address2();
+    
+    /**
+     * City value.
+     *
+     * @return the string
+     */
+    public String city();
+    
+    /**
      * State value.
      *
      * @return the string
